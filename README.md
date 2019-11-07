@@ -1,3 +1,15 @@
+
+
+## Introduction
+This is a single page application built on react which simulates a real estate implementation. 
+
+## Description
+This application has the following functionalities : 
+- View a list of available properties
+- View a list of saved properties
+- Add a property from the list to a saved list
+- Remove properties from the saved list
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
