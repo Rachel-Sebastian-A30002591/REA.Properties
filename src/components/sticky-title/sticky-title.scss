@@ -1,0 +1,9 @@
+
+@import "../../core/styles/custom";
+
+.sticky-title{
+    text-align: start;
+    font-weight: $app-font-bold;
+    padding-left: $app-spacing-medium;
+    font-size: $app-font-size-x-large;
+}

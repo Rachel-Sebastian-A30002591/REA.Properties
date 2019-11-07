@@ -1,0 +1,24 @@
+
+@import "../../core/styles/custom";
+.app-header{
+    height: 80px;
+    z-index: 1000;
+    position: sticky;
+    top:0px;
+    background: $app-primary;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    .title{
+        font-size: 36px;
+        color: $app-grey-light;
+        text-align: center;
+        @media (min-width: 320px) and (max-width: 480px) {
+            font-size: 32px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        
+    }
+}

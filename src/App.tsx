@@ -2,11 +2,26 @@ import React from 'react';
 // import logo from './logo.svg';
 
 
-const App: React.FC = () => {
+import { Provider } from 'react-redux';
+import { store } from './redux-core';
+import RootContainer from './containers';
+import './core/styles/_custom.scss';
+
+class App extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <RootContainer />
+      </Provider>
+    );
+  }
+}
+
+/* const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="https://i2.au.reastatic.net/170x32/3015ba9710c7e3ddc2ac30f45fd7906df5b04e442a7f6948f75a6029b8b871e2/main.gif" className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -21,6 +36,6 @@ const App: React.FC = () => {
       </header>
     </div>
   );
-}
+} */
 
 export default App;
