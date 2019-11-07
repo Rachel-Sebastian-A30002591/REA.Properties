@@ -2,10 +2,10 @@
 
 //Break Points to be added as the frame work progress
 
-$app-primary: #5C5A61;
-$app-secondary: #8C807D;
-$app-grey: #B39488;
-$app-grey-light: #E4EBF2;
+$app-primary: #5c5a61;
+$app-secondary: #8c807d;
+$app-grey: #b39488;
+$app-grey-light: #f7f7f7;
 $app-grey-dark: #262626;
 
 $app-spacing-x-small: 8px;
@@ -26,7 +26,6 @@ $app-font-size-large: 20px;
 $app-font-size-x-large: 28px;
 $app-font-size-xx-large: 36px;
 
-
-
-
-
+.root-container {
+  background: $app-grey-light;
+}

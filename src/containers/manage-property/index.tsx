@@ -31,7 +31,7 @@ class ManagePropertyContainer extends React.Component<IAppProps, {}> {
    *
    * @memberof ManagePropertyContainer
    */
-  handleClick = (type: string, property: Property) => {
+  public handleClick = (type: string, property: Property) => {
     if (type === PropertyTypes.Add) {
       this.props.addProperty(property);
     } else {
@@ -57,13 +57,17 @@ class ManagePropertyContainer extends React.Component<IAppProps, {}> {
         showActionButton = true;
       }
       return (
-        <PropertyCard
+        <div
+          className="col-12 col-sm-6 d-flex justify-content-center float-left"
           key={property.id}
-          property={property}
-          type={PropertyTypes.Add}
-          actionButton={showActionButton}
-          onActionClick={this.handleClick}
-        ></PropertyCard>
+        >
+          <PropertyCard
+            property={property}
+            type={PropertyTypes.Add}
+            actionButton={showActionButton}
+            onActionClick={this.handleClick}
+          ></PropertyCard>
+        </div>
       );
     });
   };
@@ -76,13 +80,17 @@ class ManagePropertyContainer extends React.Component<IAppProps, {}> {
   renderSavedList = () => {
     return this.props.propertyReducer.saved.map((property, index) => {
       return (
-        <PropertyCard
+        <div
+          className="col-12 col-sm-6  d-flex justify-content-center float-left"
           key={property.id}
-          property={property}
-          type={PropertyTypes.Remove}
-          actionButton={true}
-          onActionClick={this.handleClick}
-        ></PropertyCard>
+        >
+          <PropertyCard
+            property={property}
+            type={PropertyTypes.Remove}
+            actionButton={true}
+            onActionClick={this.handleClick}
+          ></PropertyCard>
+        </div>
       );
     });
   };
@@ -91,11 +99,11 @@ class ManagePropertyContainer extends React.Component<IAppProps, {}> {
     return (
       <div className="rootContainer">
         <div className="row pt-4 no-gutters">
-          <div className="col-12 col-sm-6">
+          <div className="col-12 col-xl-6">
             <StickyTitle title="Results"></StickyTitle>
             {this.renderResultsList()}
           </div>
-          <div className="col-12 col-sm-6">
+          <div className="col-12 col-xl-6">
             <StickyTitle title="Saved"></StickyTitle>
             {this.renderSavedList()}
           </div>

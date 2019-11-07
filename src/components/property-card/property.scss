@@ -1,23 +1,48 @@
 @import "../../core/styles/custom";
 
+$card-radius: 8px;
+
 .card {
   background: #fff;
-  border-radius: 2px;
+  border-radius: $card-radius !important;
   display: inline-block;
-  height: 320px;
+  height: 290px;
   margin: 1rem;
   position: relative;
-  width: 300px;
+  width: 270px;
 
-  .card-title {
-    text-align: center;
-    font-weight: $app-font-bold;
-    font-size: $app-font-size-large;
+  @media (min-width: 1200px) {
+    height: 320px;
+    width: 300px;
+  }
+
+  .card-top-conatiner {
+    height: $app-font-size-xx-large;
+    border-top-left-radius: $card-radius;
+    border-top-right-radius: $card-radius;
+    .card-title {
+      text-align: center;
+      font-weight: $app-font-bold;
+      font-size: $app-font-size-large;
+      margin: 0px;
+      width: 20%;
+      height: $app-font-size-xx-large;
+      border-top-right-radius: $card-radius;
+    }
+
+    .card-logo {
+      border-top-left-radius: $card-radius;
+      height: $app-font-size-xx-large;
+      width: 60%;
+    }
   }
 
   .card-main-image {
     width: 100%;
-    max-height: 180px;
+    max-height: 150px;
+    @media (min-width: 1200px) {
+      max-height: 180px;
+    }
   }
 
   .price {
@@ -28,19 +53,22 @@
   }
 
   .action-button {
-    display: none !important;
     transition: display 1s;
   }
-
-  &:hover {
+  @media (min-width: 1200px) {
     .action-button {
-      display: flex !important;
+      display: none !important;
+      transition: display 1s;
     }
-    .price {
-      height: 50%;
+    &:hover {
+      .action-button {
+        display: flex !important;
+      }
+      .price {
+        height: 50%;
+      }
     }
   }
-
 }
 
 .card-1 {
